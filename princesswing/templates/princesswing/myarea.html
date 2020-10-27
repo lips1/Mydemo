@@ -1,0 +1,92 @@
+{% extends "princesswing/homepage1.html" %}
+{% load static %}
+
+{% block body %}
+    <section>
+        <h2>Submit a Ticket </h2>
+    </section>
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h2>Additional Imformation</h2>
+
+        <form role="form" method="post" action="/princesswing/myarea id="reused_form" enctype="multipart/form-data"  >
+            <div class="form-group">
+                <label "department">
+                    Department:</label>
+                <input type="text" valu class="form-control"
+                id="name" name="dep"  required maxlength="50">
+
+            </div>
+            <div class="form-group">
+                <label "category">
+                    Category:</label>
+                <input type="text" valu class="form-control"
+                id="name" name="cat"  required maxlength="50">
+
+            </div>
+
+            <div class="form-group">
+                <label for="Discription">
+                    Discription:</label><br>
+                <textarea class="form-control" type="textarea" name="message"
+                id="message" placeholder="Your Message Here"
+                maxlength="6000" rows="7"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    subject:</label>
+                <input type="text" class="form-control"
+                id="subject" name="subject" required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label "contactname">
+                    contactname:</label>
+                <input type="text" valu class="form-control"
+                id="name" name="name"  required maxlength="50"><br>
+
+
+                    <div class="form-group"> <br>
+                <label for="project url"><br>
+                    PWS lab project URL:</label><br>
+                <input type="charfield" class="form-control"
+                id="url" name="url" required maxlength="50">
+            </div>
+
+                <label "Email"><br>
+                    Email:</label><br>
+                <input type="email" valu class="form-control"
+                id="name" name="email"  required maxlength="50"><br>
+                 <div class="form-group"><br>
+                <label "phone"><br>
+                    phone:</label><br>
+                <input type="Integerfiled" valu class="form-control"
+                id="name" name="phn"  required maxlength="50">
+
+
+                        <div class="form-group"><br>
+                <label for="name">
+                    File Upload:</label>
+                <input type="file" class="form-control" id="image" name="image"  required>
+            </div>
+
+
+
+
+            <button type="submit" class="btn btn-lg btn-success pull-right" id="btnContactUs">Submit →</button>
+
+        </form>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

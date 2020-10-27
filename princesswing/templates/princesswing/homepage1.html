@@ -1,0 +1,232 @@
+
+{% load static %}
+
+ 
+
+
+
+<!DOCTYPE HTML>
+
+<html>
+<style>
+    /*set border to the form*/
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+    /*assign full width inputs*/
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /*set a style for the buttons*/
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    /* set a hover effect for the button*/
+
+    button:hover {
+        opacity: 0.8;
+    }
+    /*set extra style for the cancel button*/
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    /*centre the display image inside the container*/
+
+    .imgcontainer {
+        text-align: center;
+        margin: 24px 0 12px 0;
+    }
+    /*set image properties*/
+
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+    /*set padding to the container*/
+
+    .container {
+        padding: 16px;
+    }
+    /*set the forgot password text*/
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /*set styles for span and cancel button on small screens*/
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+	<head>
+		<title>demo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'css/main.css'%}" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<header id="header">
+									<h1><a href="index.html" id="logo">PeerXP Support</a></h1>
+									<nav id="nav">
+										<a href="homepage1.html">Homepage</a>
+										<a href="myarea.html">My Area1</a>
+										<a href="twocolumn2.html">Knowledge Base</a>
+										<a href="homepage1.html" class="current-page-item">Sign in</a>
+										<a href="threecolumn.html">Sign up</a>
+									</nav>
+								</header>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			<!-- Main -->
+				<div id="main">
+					<div class="container">
+						<div class="row main-row">
+							<div class="col-12">
+{% block body %}
+								<section>
+									<h2>Sign In </h2>
+
+								</section>
+    <form method="POST"  action="/princesswing/homepage1/" >
+    {% csrf_token %}
+        <div class="imgcontainer">
+
+        </div>
+
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit"> sign in</button>
+            <input type="checkbox" checked="checked"> Remember me
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+{% endblock %}
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+
+								<section>
+									<h2></h2>
+									<div>
+										<div class="row">
+											<div class="col-3 col-6-medium col-12-small">
+												<ul class="link-list">
+													<li><a href="#">home</a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-small">
+												<ul class="link-list">
+													<li><a href="#">my area></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-small">
+												<ul class="link-list">
+													<li><a href="#">about us</a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+												</ul>
+											</div>
+											<div class="col-3 col-6-medium col-12-small">
+												<ul class="link-list">
+													<li><a href="#">Address</a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+													<li><a href="#"></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</section>
+
+							</div>
+							<div class="col-4 col-12-medium">
+
+								<section>
+									<h2>connect us on </h2>
+
+									<footer class="controls">
+										<a href="#" class="button">connet with gmail</a>
+									</footer>
+								</section>
+
+							</div>
+						</div>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+
+
+	</body>
+</html>
